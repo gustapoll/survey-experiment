@@ -1,0 +1,167 @@
+<nb-card>
+    <nb-card-body>
+      <nb-stepper orientation="horizontal" [linear]="true">
+        <nb-step [label]="labelOne" [stepControl]="nameForm">
+          <ng-template #labelOne>Informações</ng-template>
+          <h4>Experimento de Interpretabilidade</h4>
+          <p>
+            Obrigado por participar! Por favor, preecha todos os campos a seguir para proceguir com o experimento.
+          </p>
+
+          <form #nameForm="ngForm" class="step-container">
+            <div class="input-group">
+
+                <nb-card accent="primary">
+                    <nb-card-header>Você concorda com esses termos? *</nb-card-header>
+                    <nb-card-body>
+                        <p>
+                            As respostas fornecidas neste experimento serão utilizadas de forma anônima e 
+                            apenas para propósitos acadêmicos. Nenhuma informação será compartilhada ou aberta 
+                            para terceiros fora do âmbito desta pesquisa.
+                        </p>
+
+                        <label for="legalAccept" style="padding: 1%;"><b>Sim</b></label>
+
+                        <input type="checkbox"
+                               nbTooltip="obrigatório" 
+                               [nbTooltipIcon]="{icon: 'alert-triangle-outline', pack: 'eva'}" 
+                               nbTooltipStatus="danger"
+                               nbTooltipPlacement="right"
+                               class="form-control"
+                               text="Sim"
+                               required
+                               nbCheckbox
+                               ngModel
+                               #legalAccept
+                               [ngModelOptions]="{standalone: true}"
+                               #name="ngModel">
+                    </nb-card-body>
+                </nb-card>
+
+                <nb-card accent="primary">
+                    <nb-card-header>Informe seu número USP *</nb-card-header>
+                    <nb-card-body>
+                        <input type="text"
+                               nbTooltip="obrigatório" 
+                               [nbTooltipIcon]="{icon: 'alert-triangle-outline', pack: 'eva'}" 
+                               nbTooltipStatus="danger"
+                               nbTooltipPlacement="right"
+                               placeholder="Nº USP"
+                               class="form-control"
+                               name="name"
+                               required
+                               nbInput
+                               ngModel
+                               #name="ngModel"
+                               [status]="name.invalid ? 'danger' : 'basic'">
+                    </nb-card-body>
+                </nb-card>
+            </div>
+            <button nbButton nbStepperNext>continuar</button>
+          </form>
+        </nb-step>
+
+        <nb-step [label]="labelTwo">
+          <ng-template #labelTwo>Calisto</ng-template>
+          <h4>Calisto - Sistema de Recomendação Conversacional de disciplinas da EPUSP</h4>
+          <p>
+            Este primeiro chatbot é um sistema de recomendação conversacional de disciplinas da POLI-USP. Comece 
+            enviando um "oi" e em seguida peça alguma sugestão de disciplina sobre algum tema do seu interesse, por
+            exemplo IA.
+          </p>
+
+          <nb-card accent="primary">
+            <nb-card-body>
+                <iframe allow="microphone;"
+                        width="350"
+                        height="430"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/0d4ce1d5-5965-4efb-908b-73fd8f301162">
+                </iframe>
+            </nb-card-body>
+          </nb-card>
+
+          <button nbButton nbStepperPrevious style="margin-right: 1%;">voltar</button>
+          <button nbButton nbStepperNext>continuar</button>
+        </nb-step>
+
+        <nb-step [label]="labelThree">
+            <ng-template #labelThree>Teste #1</ng-template>
+            <h4>Método de Explicação #1</h4>
+            <p>
+              Este segundo chatbot ...
+            </p>
+  
+            <nb-card accent="primary">
+              <nb-card-body>
+                  <iframe allow="microphone;"
+                          width="350"
+                          height="430"
+                          src="https://console.dialogflow.com/api-client/demo/embedded/0d4ce1d5-5965-4efb-908b-73fd8f301162">
+                  </iframe>
+              </nb-card-body>
+            </nb-card>
+  
+            <button nbButton nbStepperPrevious style="margin-right: 1%;">voltar</button>
+            <button nbButton nbStepperNext>continuar</button>
+        </nb-step>
+
+
+        <nb-step [label]="labelFour">
+            <ng-template #labelFour>Teste #2</ng-template>
+            <h4>Método de Explicação #2</h4>
+            <p>
+              Este terceiro chatbot ...
+            </p>
+  
+            <nb-card accent="primary">
+              <nb-card-body>
+                  <iframe allow="microphone;"
+                          width="350"
+                          height="430"
+                          src="https://console.dialogflow.com/api-client/demo/embedded/0d4ce1d5-5965-4efb-908b-73fd8f301162">
+                  </iframe>
+              </nb-card-body>
+            </nb-card>
+  
+            <button nbButton nbStepperPrevious style="margin-right: 1%;">voltar</button>
+            <button nbButton nbStepperNext>continuar</button>
+        </nb-step>
+
+
+        <nb-step [label]="labelFive">
+            <ng-template #labelFive>Teste #3</ng-template>
+            <h4>Método de Explicação #3</h4>
+            <p>
+              Este quarto chatbot ...
+            </p>
+  
+            <nb-card accent="primary">
+              <nb-card-body>
+                  <iframe allow="microphone;"
+                          width="350"
+                          height="430"
+                          src="https://console.dialogflow.com/api-client/demo/embedded/0d4ce1d5-5965-4efb-908b-73fd8f301162">
+                  </iframe>
+              </nb-card-body>
+            </nb-card>
+  
+            <button nbButton nbStepperPrevious style="margin-right: 1%;">voltar</button>
+            <button nbButton nbStepperNext>finalizar</button>
+        </nb-step>
+
+        <nb-step [label]="labelSix">
+            <ng-template #labelSix>Conclusão</ng-template>
+  
+            <nb-card accent="primary">
+              <nb-card-header>
+                  <h2>Muito Obrigado!</h2>
+              </nb-card-header>
+              <nb-card-body>
+                <nb-icon icon="checkmark-circle-2-outline" style="width: 40%; height: 40%;" status="success"></nb-icon>
+              </nb-card-body>
+            </nb-card>
+        </nb-step>
+
+    </nb-stepper>
+  </nb-card-body>
+</nb-card>
