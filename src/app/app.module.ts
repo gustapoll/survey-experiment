@@ -10,6 +10,12 @@ import { NbThemeModule, NbLayoutModule, NbStepperModule, NbCardModule, NbButtonM
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ExperimentFlowComponent } from './experiment-flow/experiment-flow.component';
 
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule} from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +35,11 @@ import { ExperimentFlowComponent } from './experiment-flow/experiment-flow.compo
     NbCheckboxModule,
     NbInputModule,
     NbIconModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

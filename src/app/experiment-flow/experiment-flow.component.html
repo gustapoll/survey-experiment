@@ -31,8 +31,7 @@
                                text="Sim"
                                required
                                nbCheckbox
-                               ngModel
-                               #legalAccept
+                               [(ngModel)]="legalAccept"
                                [ngModelOptions]="{standalone: true}"
                                #name="ngModel">
                     </nb-card-body>
@@ -51,13 +50,13 @@
                                name="name"
                                required
                                nbInput
-                               ngModel
+                               [(ngModel)]="nusp"
                                #name="ngModel"
                                [status]="name.invalid ? 'danger' : 'basic'">
                     </nb-card-body>
                 </nb-card>
             </div>
-            <button nbButton nbStepperNext>continuar</button>
+            <button nbButton nbStepperNext (click)="registerUser()">continuar</button>
           </form>
         </nb-step>
 
