@@ -91,6 +91,15 @@
               cada um deles, peça recomendações de disciplinas e pergunte "porquê <i>item recomendado</i>?". Ao final, termine 
               com um "obrigado" e responda <b>todas</b> as 5 questões de avaliação dando notas de 1 a 5.
             </p>
+
+            <nb-card>
+                <nb-card-header>Lista de Temas</nb-card-header>
+                <nb-card-body style="display: flex; flex-wrap: wrap;">
+                    <div *ngFor="let theme of themeList" style="margin: 0.5%;">
+                        <button nbButton outline status="primary">{{theme}}</button>
+                    </div>
+                </nb-card-body>
+              </nb-card>
   
             <nb-card accent="primary">
               <nb-card-body>
@@ -115,6 +124,15 @@
               recomendações. Por exemplo, pergunte "porque <i>item recomendado</i> e <i>outro item recomendado</i>". Ao final, 
               termine com um "obrigado" e responda <b>todas</b> as 5 questões de avaliação dando notas de 1 a 5.
             </p>
+
+            <nb-card>
+                <nb-card-header>Lista de Temas</nb-card-header>
+                <nb-card-body style="display: flex; flex-wrap: wrap;">
+                    <div *ngFor="let theme of themeList" style="margin: 0.5%;">
+                        <button nbButton outline status="primary">{{theme}}</button>
+                    </div>
+                </nb-card-body>
+              </nb-card>
   
             <nb-card accent="primary">
               <nb-card-body>
@@ -139,6 +157,15 @@
               por este chatbot comparadas as anteriores. Ao final, termine com um "obrigado" e responda <b>todas</b> as 5 questões
               de avaliação dando notas de 1 a 5.
             </p>
+
+            <nb-card>
+                <nb-card-header>Lista de Temas</nb-card-header>
+                <nb-card-body style="display: flex; flex-wrap: wrap;">
+                    <div *ngFor="let theme of themeList" style="margin: 0.5%;">
+                        <button nbButton outline status="primary">{{theme}}</button>
+                    </div>
+                </nb-card-body>
+              </nb-card>
   
             <nb-card accent="primary">
               <nb-card-body>
@@ -165,6 +192,8 @@
                 <nb-icon icon="checkmark-circle-2-outline" style="width: 40%; height: 40%;" status="success"></nb-icon>
               </nb-card-body>
             </nb-card>
+
+            <button nbButton nbStepperPrevious style="margin-right: 1%;">voltar</button>
         </nb-step>
 
     </nb-stepper>

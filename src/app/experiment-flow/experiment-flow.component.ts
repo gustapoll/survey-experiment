@@ -11,6 +11,12 @@ export class ExperimentFlowComponent implements OnInit {
   legalAccept: boolean;
   nusp: number;
 
+  themeList: string[] = [
+    "Inteligência Artificial", "Rede Neural", "Redes de Computadores", "Aprendizado de Máquina", "Máquinas Térmicas",
+    "Economia", "Agricultura de Precisão", "Microeletrônica", "Construção Civil", "Recursos Hídricos",
+    "Empreendedorismo", "Visão Computacional", "Probabilidade", "Medicina", "Aeronáutica"
+  ]
+
   constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
